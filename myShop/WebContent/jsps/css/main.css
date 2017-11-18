@@ -1,0 +1,57 @@
+* {
+	font-size: 10pt;
+}
+
+body {
+	text-align: center;
+}
+
+.table {
+	width: 1200px;
+	height: 100%;
+ 	border: 1px solid #8600FF; 
+	border-collapse: collapse;
+}
+
+.table td {
+	 border: 1px solid #8600FF; 
+}
+
+.trTop {
+	background: #8600FF;  
+	background-image :  url(images/beijing.jpg);
+}
+
+.tdTop {
+	text-align: center;
+	height: 100px;
+}
+
+.tdLeft {
+	width: 172px;
+	padding: 5px;
+}
+
+.tdSearch {
+	height: 45px;
+	border-bottom-width: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+#hint{
+	position: absolute;
+	width: 70px;
+	height: 100px;
+	margin-left: 0px;
+	margin-top: 200px;
+}
+
+
+.tdBody {
+	border-top-width: 0px;
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+}
