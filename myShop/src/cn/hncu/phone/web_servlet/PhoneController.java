@@ -132,6 +132,7 @@ public class PhoneController {
 		public String load(HttpServletRequest req, HttpServletResponse resp)
 				throws ServletException, IOException {
 			String pid = req.getParameter("pid");//获取链接的参数bid
+			String url = req.getRequestURI();
 			Phone phone = phoneService.findByPid(pid);//通过bid得到book对象
 			req.setAttribute("phone", phone);//保存到req中
 			return "desc";//转发到desc.jsp

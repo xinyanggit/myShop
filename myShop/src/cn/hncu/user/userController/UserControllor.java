@@ -178,6 +178,11 @@ public class UserControllor {
 		 * 2. 校验之, 如果校验失败，保存错误信息，返回到regist.jsp显示
 		 */
 		Map<String,String> errors = validateRegist(formUser, req.getSession());
+		String reqHost = req.getServerName();
+		if(reqHost == null){
+			reqHost = "localhost";
+		}
+		formUser.setServerHost(reqHost);
 		System.out.println("错误的长度"+errors.size());
 		if(errors.size() > 0) {
 			req.setAttribute("form", formUser);
@@ -190,6 +195,7 @@ public class UserControllor {
 		try {
 			service.regist(formUser);
 		} catch (Exception e) {
+			System.out.println(e);
 			return "reg_error";
 		}
 		/*

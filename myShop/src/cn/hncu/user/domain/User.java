@@ -15,9 +15,17 @@ public class User {
 		private String reloginpass;//确认密码
 		private String verifyCode;//验证码
 		private String newpass;//新密码
-
+		private String serverHost ;// 主机名称，便于以后使用
 		public String getUid() {
 			return uid;
+		}
+
+		public String getServerHost() {
+			return serverHost;
+		}
+
+		public void setServerHost(String serverHost) {
+			this.serverHost = serverHost;
 		}
 
 		public void setUid(String uid) {

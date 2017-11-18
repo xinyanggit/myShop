@@ -156,7 +156,7 @@ public class UserService implements IUserService{
 		String subject = prop.getProperty("subject");
 		// MessageForm.format方法会把第一个参数中的{0},使用第二个参数来替换。
 		// 例如MessageFormat.format("你好{0}, 你{1}!", "张三", "去死吧"); 返回“你好张三，你去死吧！”
-		String content = MessageFormat.format(prop.getProperty("content"), user.getActivationCode());
+		String content = MessageFormat.format(prop.getProperty("content").replace("localhost", user.getServerHost()), user.getActivationCode());
 		Mail mail = new Mail(from, to, subject, content);
 		/*
 		 * 发送邮件
@@ -165,7 +165,7 @@ public class UserService implements IUserService{
 			SendEmail.send(session, mail);
 			userdao.add(user);
 		} catch (Exception e) {
-			throw new RuntimeException("网络异常。 请重新注册");
+			throw new RuntimeException(e+"网络异常。 请重新注册");
 		}
 	}
 }

@@ -18,7 +18,7 @@
 	<script type="text/javascript">
 		function checkForm() {
 			if(!$("#adminname").val()) {
-				alert("管理员名称不能为空！");
+				alert("管理员名称	不能为空！");
 				return false;
 			}
 			if(!$("#adminpwd").val()) {
