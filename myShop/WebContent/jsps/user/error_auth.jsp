@@ -34,7 +34,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		        if(x>0){  
 		        document.getElementById("sp").innerHTML=x;  //每次设置的x的值都不一样了。  
 		        }else{  
-		       parent.location.href=${path}+":8080/myShop/jsps/user/login.jsp";  
+		   		debugger ;
+		       parent.location.href="<%=basePath%>/jsps/user/login.jsp";  
 		        }  
 		    }  
 </script>  
