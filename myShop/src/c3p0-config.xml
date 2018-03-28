@@ -7,7 +7,7 @@
 			]]>
 		</property>
 		<property name="driverClass">com.mysql.jdbc.Driver</property>
-		<property name="user">yx_buyer</property>
+		<property name="user">yx_goods</property>
 		<property name="password">123456</property>
 		
 		<property name="acquireIncrement">3</property>
